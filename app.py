@@ -7,6 +7,7 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 
 
+# forward slash in @app.route refers to the default route
 @app.route("/")
 def hello():
     return "Hello World .. again!"
