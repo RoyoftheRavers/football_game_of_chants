@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chants</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+
 
     {% for chant in chants%}
         {{ chant.team_name }}<br>
@@ -13,7 +9,5 @@
         {{ chant.chant_title }}<br>
         {{ chant.chant_lyrics }}
     {% endfor %}
-    
-</body>
-</html>
 
+{% endblock %}
