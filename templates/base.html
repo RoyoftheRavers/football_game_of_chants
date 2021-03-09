@@ -15,10 +15,10 @@
     <header>
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Logo</a>
+                <a href="{{ url_for('get_chants') }}" class="brand-logo">Game of Chants</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('get_chants') }}">Home</a></li>
                     <li><a href="#">Search Chants</a></li>
                     <li><a href="#">New Chant</a></li>
                     <li><a href="#">Profile</a></li>
@@ -30,7 +30,7 @@
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Home</a></li>
+            <li><a href="{{ url_for('get_chants') }}">Home</a></li>
             <li><a href="#">Search Chants</a></li>
             <li><a href="#">New Chant</a></li>
             <li><a href="#">Profile</a></li>
