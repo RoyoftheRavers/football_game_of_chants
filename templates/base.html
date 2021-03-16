@@ -20,11 +20,14 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_chants') }}">Home</a></li>
                     <li><a href="#">Search Chants</a></li>
-                    <li><a href="#">New Chant</a></li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% if user.session %}
+                        <li><a href="#">New Chant</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
