@@ -20,7 +20,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_chants') }}">Home</a></li>
                     <li><a href="#">Search Chants</a></li>
-                    {% if user.session %}
+                    {% if session.user %}
                         <li><a href="#">New Chant</a></li>
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
