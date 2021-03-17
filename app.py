@@ -52,12 +52,12 @@ def register():
 
         # check if username and password data is validated
         if request.form.get("username") == "" or not validate_username(
-          request.form.get("username")):
+          request.form.get("username").lower()):
             flash("Username contains invalid characters. Only letters and numbers are permitted.")
             return redirect(url_for("register"))
         if request.form.get("password") == "" or not validate_password(
           request.form.get("password")):
-            flash("Please enter a valid password between 5 and 15 characters long.")
+            flash("Please enter a valid password.")
             return redirect(url_for("register"))
 
 
@@ -82,7 +82,7 @@ def login():
     if request.method == "POST":
         # check if username and password data is validated
         if request.form.get("username") == "" or validate_username(
-          request.form.get("username")):
+          request.form.get("username").lower()):
             flash("Invalid username and/or password.")
             return redirect(url_for("login"))
         if request.form.get("password") == "" or validate_password(
