@@ -12,13 +12,14 @@ if os.path.exists("env.py"):
 
 # validation functions
 def validate_username(username):
-    # validate username by only allowing letters and numbers, min char 5/max 15
+    # validate username only allowing letters and numbers
+    # mininimum chars 5/max 15
     return re.match("^[a-zA-Z0-9]{5, 15}$", username)
 
 
 def validate_password(password):
-    # validate password by only allowing letters and numbers, min char 5/max 15
-    return re.match("^[a-zA-Z0-9]{5, 15}$", password)
+    # validate password by only allowing min chars 5/max 15
+    return re.match("^.{5, 15}$", password)
 
 
 app = Flask(__name__)
@@ -42,6 +43,15 @@ def register():
     # check if method is POST
     if request.method == "POST":
         # check if username and password data is validated
+        if request.form.get("username") == "" or not validate_username(
+          request.form.get("username")):
+            flash("Username contains invalid characters. Only letters and numbers are permitted.")
+            return redirect(url_for("register"))
+        if request.form.get("password") == "" or not validate_password(
+          request.form.get("password")):
+            flash("Please enter a valid password between 5 and 15 characters long.")
+            return redirect(url_for("register"))
+
 
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
