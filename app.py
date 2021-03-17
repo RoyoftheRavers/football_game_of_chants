@@ -1,4 +1,5 @@
 import os
+import re
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -7,6 +8,17 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
+
+
+# validation functions
+def validate_username(username):
+    # validate username by only allowing letters and numbers, min char 5/max 15
+    return re.match("^[a-zA-Z0-9]{5, 15}$", username)
+
+
+def validate_password(password):
+    # validate password by only allowing letters and numbers, min char 5/max 15
+    return re.match("^[a-zA-Z0-9]{5, 15}$", password)
 
 
 app = Flask(__name__)
@@ -27,7 +39,10 @@ def get_chants():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    # check if method is POST
     if request.method == "POST":
+        # check if username and password data is validated
+
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
