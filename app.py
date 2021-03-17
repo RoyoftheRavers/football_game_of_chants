@@ -42,6 +42,14 @@ def get_chants():
 def register():
     # check if method is POST
     if request.method == "POST":
+        # check if username already exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Username already exists")
+            return redirect(url_for("register"))
+
         # check if username and password data is validated
         if request.form.get("username") == "" or not validate_username(
           request.form.get("username")):
@@ -52,14 +60,6 @@ def register():
             flash("Please enter a valid password between 5 and 15 characters long.")
             return redirect(url_for("register"))
 
-
-        # check if username already exists in db
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
-            flash("Username already exists")
-            return redirect(url_for("register"))
 
         register = {
             "username": request.form.get("username").lower(),
@@ -81,14 +81,14 @@ def login():
     # check if method is POST
     if request.method == "POST":
         # check if username and password data is validated
-        if request.form.get("username") == "" or not validate_username(
+        if request.form.get("username") == "" or validate_username(
           request.form.get("username")):
             flash("Invalid username and/or password.")
-            return redirect(url_for("register"))
-        if request.form.get("password") == "" or not validate_password(
+            return redirect(url_for("login"))
+        if request.form.get("password") == "" or validate_password(
           request.form.get("password")):
             flash("Invalid username and/or password.")
-            return redirect(url_for("register"))
+            return redirect(url_for("login"))
 
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
