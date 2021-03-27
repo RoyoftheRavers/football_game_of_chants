@@ -2,12 +2,24 @@
 {% block content %}
 
 
+    
+        
+    <ul class="collapsible">
+        {% for chant in chants %}
+        <li>
+            <div class="collapsible-header white-text grey darken-3">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ chant.chant_title }}</strong>
+            </div>
+            <div class="collapsible-body">
+                <div>Club Name: {{ chant.team_name }}</div>
+                <div>Country: {{ chant.country }}</div><br>
+                <div>Chant Lyrics:</div>
+                <p><em>{{ chant.chant_lyrics }}</em></p>
+            </div>
 
-    {% for chant in chants%}
-        {{ chant.team_name }}<br>
-        {{ chant.country }}<br>
-        {{ chant.chant_title }}<br>
-        {{ chant.chant_lyrics }}
-    {% endfor %}
+        {% endfor %}
+        </li>
+    </ul>    
 
 {% endblock %}

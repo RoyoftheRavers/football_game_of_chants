@@ -34,7 +34,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_chants")
 def get_chants():
-    chants = mongo.db.chants.find()
+    chants = list(mongo.db.chants.find())
     return render_template("chants.html", chants=chants)
 
 
