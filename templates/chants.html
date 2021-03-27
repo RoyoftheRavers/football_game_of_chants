@@ -2,7 +2,7 @@
 {% block content %}
 
 
-    
+   <h3 class="black-text darken-4 center-align">All Chants</h3> 
         
     <ul class="collapsible">
         {% for chant in chants %}
@@ -12,9 +12,9 @@
                 <strong>{{ chant.chant_title }}</strong>
             </div>
             <div class="collapsible-body">
-                <div>Club Name: {{ chant.team_name }}</div>
+                <div>Club: {{ chant.team_name }}</div>
                 <div>Country: {{ chant.country }}</div><br>
-                <div>Chant Lyrics:</div>
+                <div><span>Chant Lyrics for "</span>{{ chant.chant_title }}":</div>
                 <p><em>{{ chant.chant_lyrics }}</em></p>
             </div>
 
