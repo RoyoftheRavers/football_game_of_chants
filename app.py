@@ -137,8 +137,19 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_chant")
+@app.route("/add_chant", methods=["GET", "POST"])
 def add_chant():
+    if request.method == "POST":
+        chant = {
+            "chant_title": request.form.get("chant_title"),
+            "club_name": request.form.get("club_name"),
+            "country": request.form.get("country"),
+            "chant_lyrics": request.form.get("chant_lyrics")
+        }
+        mongo.db.chants.insert_one(chant)
+        flash("Your chant was submitted, thank you!")
+        return redirect(url_for("get_chants"))
+
     return render_template("add_chant.html")
 
 
