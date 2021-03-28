@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="black-text darken-4 center-align">Edit Chant</h3>
+
+    <div class="row card-panel">
+        <form class="col s12" method="POST" action="{{ url_for('edit_chant', chant_id=chant._id) }}">
+            <!--Chant Title-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pen-alt prefix"></i>
+                    <input placeholder="Chant Title" id="chant_title" name="chant_title" minlength="1" maxlength="50" type="text" class="validate" required>
+                    <label for="chant_title"></label>
+                </div>
+            </div>
+            <!--Club-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="far fa-futbol prefix"></i>
+                    <input placeholder="Club" id="club_name" name="club_name" minlength="1" maxlength="50" type="text" class="validate" required>
+                    <label for="club_name"></label>
+                </div>
+            </div>
+            <!--Country-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="far fa-flag prefix"></i>
+                    <input placeholder="Country" id="country" name="country" minlength="5" maxlength="50" type="text" class="validate" required>
+                    <label for="country"></label>
+                </div>
+            </div>
+            <!--Chant Lyrics-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-music prefix"></i>
+                    <textarea placeholder="Chant Lyrics" id="chant_lyrics" name="chant_lyrics" 
+                    minlength="20" maxlength="500" type="text" class="materialize-textarea validate"></textarea>
+                    <label for="chant_lyrics"></label>
+                </div>
+            </div>
+            <!--Submit Button-->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn-large grey darken-3" type="submit">
+                        <span><strong>Edit Chant </strong></span>
+                        <i class="fas fa-user-edit"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
