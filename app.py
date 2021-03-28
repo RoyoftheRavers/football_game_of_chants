@@ -155,6 +155,16 @@ def add_chant():
 
 @app.route("/edit_chant/<chant_id>", methods=["GET", "POST"])
 def edit_chant(chant_id):
+    if request.method == "POST":
+        submit = {
+            "chant_title": request.form.get("chant_title"),
+            "club_name": request.form.get("club_name"),
+            "country": request.form.get("country"),
+            "chant_lyrics": request.form.get("chant_lyrics")
+        }
+        mongo.db.chants.update({"_id": ObjectId(chant_id)}, submit)
+        flash("Chant Sucessfully Updated")
+
     chant = mongo.db.chants.find_one({"_id": ObjectId(chant_id)})
     return render_template("edit_chant.html", chant=chant)
 
