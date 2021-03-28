@@ -169,6 +169,13 @@ def edit_chant(chant_id):
     return render_template("edit_chant.html", chant=chant)
 
 
+@app.route("/delete_chant/<chant_id>")
+def delete_chant(chant_id):
+    mongo.db.chants.remove({"_id": ObjectId(chant_id)})
+    flash("Chant Successfully Deleted")
+    return redirect(url_for("get_chants"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
