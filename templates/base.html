@@ -13,10 +13,11 @@
 </head>
 <body>
     <header>
+        <!--Main navbar top-->
         <nav>
             <div class="nav-wrapper grey darken-3">
                 <a href="{{ url_for('get_chants') }}" class="brand-logo">Game of Chants</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_chants') }}">Home</a></li>
                     {% if session.user %}
@@ -31,7 +32,9 @@
             </div>
         </nav>
 
+        <!--Mobile side navbar-->
         <ul class="sidenav" id="mobile-demo">
+            <li><h5 class="center-align grey-darken-3">Game of Chants Menu</h5></li>
             <li><a href="{{ url_for('get_chants') }}">Home</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('add_chant') }}">New Chant</a></li>
