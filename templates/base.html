@@ -16,7 +16,7 @@
         <!--Main navbar top-->
         <nav>
             <div class="nav-wrapper grey darken-3">
-                <a href="{{ url_for('get_chants') }}" class="brand-logo">Game of Chants</a>
+                <a href="{{ url_for('get_chants') }}" class="nav-heading">Game of Chants</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_chants') }}">Home</a></li>
@@ -34,7 +34,7 @@
 
         <!--Mobile side navbar-->
         <ul class="sidenav" id="mobile-demo">
-            <li><h5 class="center-align grey-darken-3">Game of Chants Menu</h5></li>
+            <li><h5 class="center-align grey-darken-3">Menu</h5></li>
             <li><a href="{{ url_for('get_chants') }}">Home</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('add_chant') }}">New Chant</a></li>

@@ -16,7 +16,7 @@ As a site owner, I want:
 
 1. A page containing all chants submitted by users with an option to view lyrics
 2. A quick and easy method for fans to upload chants
-3. The ability to track which chants were created by which user
+3. A record linking each chant created to a user
 4. A simple method for users to register with
 
 
