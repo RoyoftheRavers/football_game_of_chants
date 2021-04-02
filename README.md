@@ -16,7 +16,7 @@ As a site owner, I want:
 
 1. A page containing all chants submitted by users with an option to view lyrics
 2. A quick and easy method for fans to upload chants
-3. A record linking each chant created to a user
+3. A uniquely generated record for each chant
 4. A simple method for users to register with
 
 ### Wireframes
@@ -33,12 +33,42 @@ maintained from the orginal wireframes, such as Search which was deemed not to h
  - [All Chants](wireframes/All-Chants.JPG)
 
 
+## Features and Testing
+
+Each user story from both the user and site owner perspective was tested as outlined below.
+
+### Football Fan Testing
+
+1. Discover the title and lyrics of chants/songs from various football clubs:
+![alt text](user-stories/fan1.JPG "")
+
+2. Share football chants with other fans around the world
+![alt text](user-stories/fan2.JPG "")
+
+3. Update chants with latest lyrics or chorus changes
+![alt text](user-stories/fan3.JPG "")
+
+4. Delete chants when they are created in error or become irrelevant
+![alt text](user-stories/fan4.JPG "")
+
+### Site Owner Testing
+
+1. A page containing all chants submitted by users with an option to view lyrics
+![alt text](user-stories/owner1.JPG "")
+
+2. A quick and easy method for fans to upload chants
+![alt text](user-stories/owner2.JPG "")
+
+3. A uniquely generated record for each chant
+![alt text](user-stories/owner3.JPG "")
+
+4. A simple method for users to register with
+![alt text](user-stories/owner4.JPG "")
 
 
 
 
 
-## Features
 
 ## Technologies
 
