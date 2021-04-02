@@ -19,6 +19,19 @@ As a site owner, I want:
 3. A record linking each chant created to a user
 4. A simple method for users to register with
 
+### Wireframes
+
+ - [Home Page](wireframes/Home page (not logged in).JPG)
+ - [Register]
+ - [Log In]
+ - [Home Page (logged in)]
+ - [New Chant]
+ - [All Chants]
+
+
+
+
+
 
 
 ## Features
