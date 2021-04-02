@@ -21,12 +21,12 @@ As a site owner, I want:
 
 ### Wireframes
 
- - [Home Page](wireframes/Home page (not logged in).JPG)
- - [Register]
+ - [Home Page](wireframes/Home-page(not-logged-in).JPG)
+ - [Register](https:www.google.com)
  - [Log In]
  - [Home Page (logged in)]
  - [New Chant]
- - [All Chants]
+ - [All Chants](wireframes/All-Chants.JPG)
 
 
 
