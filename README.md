@@ -21,6 +21,10 @@ As a site owner, I want:
 
 ### Wireframes
 
+I used the [Balsamiq] tool to create low-fi prototypes of how the site pages would look. 
+This gave a good starting guide as to how various features might appear to the user. Not every feature was 
+maintained from the orginal wireframes, such as Search which was deemed not to have sufficient value for the user.
+
  - [Home Page](wireframes/Home-page(not-logged-in).JPG)
  - [Register](wireframes/Register-Page.JPG)
  - [Log In](wireframes/Log-In.JPG)
