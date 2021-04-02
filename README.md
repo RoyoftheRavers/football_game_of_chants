@@ -1,10 +1,16 @@
 # Football: A Game of Chants
 
 ## Introduction and Background
+'Football: A Game of Chants' is a fictitious website where football fans can come together and share 
+the latest football songs and chants from their own club or clubs around the world. As singing chants
+is a big part of football culture for many fans, the site offers a useful outlet for enthusiasts to
+discover what songs are synonymous from which clubs in various countries.
+As part of MS3 requiremets in the Code Institute, the site offers full CRUD operations, demonstrated in
+both the user authentication and chant upload/read/edit/delete functionality.
 
 The repository and deployed site can be accessed below:
-[Github repo](https://github.com/RoyoftheRavers/football_game_of_chants)
-[Live site]()
+ - [Github repo](https://github.com/RoyoftheRavers/football_game_of_chants)
+ - [Live site](https://game-of-chants-project.herokuapp.com/)
 
 ## User Experience (UX)
 ### User Stories
@@ -68,6 +74,18 @@ Each user story from both the user and site owner perspective was tested as outl
 
 4. A simple method for users to register with
 ![alt text](user-stories/owner4.JPG "")
+
+
+## Future Iterations
+
+Although the main purpose of this site is to demonstrate CRUD operations in a potentially useful real-life site,
+there are several additions that could be made to increase the site's UX and popularity. 
+ - As the site grows, pagination could be added via Flask so that perhaps only 20 chants could be displayed on each page.
+ - As more clubs are added, users could filter by club.
+ - As more countries are added, users could filter by country.
+ - Links to official football sites could be added.
+ - Flag logos could be added to each country using an API or JSON file.
+ - A branded logo could increase the site's visual appeal to users. 
 
 
 ## Technologies and Deployment
