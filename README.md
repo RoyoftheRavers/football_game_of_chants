@@ -25,7 +25,7 @@ As a site owner, I want:
  - [Register](wireframes/Register-Page.JPG)
  - [Log In](wireframes/Log-In.JPG)
  - [Home Page (logged in)](wireframes/Home-page(logged-in).JPG)
- - [New Chant](Add-Chant.JPG)
+ - [New Chant](wireframes/Add-Chant.JPG)
  - [All Chants](wireframes/All-Chants.JPG)
 
 
