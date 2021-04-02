@@ -42,4 +42,20 @@ maintained from the orginal wireframes, such as Search which was deemed not to h
 
 ## Technologies
 
+ - [Balsamiq]() was used for creating initial wireframes.
+ - [HTML5]() was used for the element structure of each page on the site.
+ - [CSS]() was used sparingly for custom style elements.
+ - [Materialize]() was used as an element design library for a user-friendly experience.
+ - [JavaScript]() and [JQuery]() were used for adding interaction and responsiveness to elements.
+ - [Python]() was used in the backend to install packages and run the main app.
+ - [Flask]() was imported for additional functionality such as rendering templates, messaging and redirecting.
+ - [Jinja Templating Language]() was used to loop over items and add the ability to inherit templates.
+ - [MongoDB]() was used to store user inputs in clusters in the database.
+ - [Gitpod]() was used for commands in a dev environment, in order to ultimately store the code in Github.
+ - [Github]() was used to store the code and assets.
+ - [Heroku]() was used to deploy the code to a production environment.
+ 
+ - []()
+ - []()
+
 ## Acknowledgements
