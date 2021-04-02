@@ -2,6 +2,10 @@
 
 ## Introduction and Background
 
+The repository and deployed site can be accessed below:
+[Github repo](https://github.com/RoyoftheRavers/football_game_of_chants)
+[Live site]()
+
 ## User Experience (UX)
 ### User Stories
 
@@ -66,11 +70,7 @@ Each user story from both the user and site owner perspective was tested as outl
 ![alt text](user-stories/owner4.JPG "")
 
 
-
-
-
-
-## Technologies
+## Technologies and Deployment
 
  - [Balsamiq](https://balsamiq.com/wireframes/) was used for creating initial wireframes.
  - [HTML5](https://html.com/html5/) was used for the element structure of each page on the site.
@@ -85,5 +85,15 @@ Each user story from both the user and site owner perspective was tested as outl
  - [Github](https://github.com/) was used to store the code and assets.
  - [Heroku](https://dashboard.heroku.com/apps) was used to deploy the code to a production environment.
 
+ ### Deployment Security
+
+ For security purposes, environment variables were used via an env.py file in dev and Config Vars in Heroku in production.
+ Password hashing was also used in the authentication process for added security.
+
 
 ## Acknowledgements
+
+My mentor Felipe was an excellent help throughout each stage of the process. Code Institute Student Care 
+were very helpful and understanding, particulary when difficult issues arose on a number of levels - they made 
+the process a lot more manageable. CI Tutor support were very good when needed.
+The CI mini-project was very useful in learning the tools needed for this project.
